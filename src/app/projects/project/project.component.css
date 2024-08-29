@@ -1,0 +1,122 @@
+.project-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange content vertically with image at the top */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Consolas', monospace;
+    margin: 25px;
+    transition: transform 0.3s ease;
+    width: 400px;
+    /* height: 800px; */
+    
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.image-container {
+    position: relative; /* Set the container's position to relative to contain the absolutely positioned link */
+    width: 100%;
+    height: auto; /* Set a fixed height for the image container */
+    overflow: hidden;
+}
+
+.github-link {
+    position: absolute; /* Position the link absolutely within the image container */
+    top: 50%; /* Move the link down 50% from the top */
+    left: 50%; /* Move the link right 50% from the left */
+    transform: translate(-50%, -50%); /* Adjust the position to be centered */
+    color: #333;
+    font-size: 26px;
+    text-decoration: none;
+    background-color: #a09a9a;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden, only shown on hover */
+    transition: opacity 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio of the image */
+    object-fit: cover; /* Ensures the image fits within the container without being cut off */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* .github-link {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 26px;
+    text-decoration: none;
+    background-color: #a09a9a;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+
+    transition: opacity 0.3s ease;
+} */
+
+.project-card:hover .github-link {
+    display: block;
+}
+
+.github-link:hover {
+    text-decoration-line: underline;
+}
+
+.project-card:hover .image-container img {
+    visibility: hidden;
+}
+
+.project-card:hover .image-container {
+    background-color: #F0F0F0;
+}
+
+.project-info {
+    /* padding: 10px; */
+    /* display: contents; */
+     text-align: center; /* Center text horizontally */
+     margin-top: 15px;
+     margin-bottom: 15px;
+}
+
+.project-info h2 {
+    /* margin: 20px 0; */
+    font-size: 40px;
+    font-weight: bold;
+    color: #1A4870;
+   
+}
+
+.project-info p {
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+    color: #555;
+    line-height: 30px;
+}
+
+.skills {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.skills span {
+    background-color: #F0F0F0;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    color: #333;
+}

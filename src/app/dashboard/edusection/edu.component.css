@@ -1,0 +1,235 @@
+.education-header {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-top: #0056b3 2px solid;
+    margin-top: 20px;
+}
+
+.education-header{
+  font-size:40px
+}
+.education-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 1000px; /* Full width of the container */
+    overflow: hidden; /* Hide overflow to show only one education at a time */
+    margin-bottom: 20px; /* Add space below the container for the arrows */
+    
+}
+
+.education-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Total width to accommodate all cards */
+    
+}
+
+.education-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px; /* Each education box will take the full width */
+    padding: 20px;
+    /* box-sizing: border-box; */
+    background-color: #f8f9fa;
+     border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add margin between education boxes */
+}
+
+.education-content span {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.education-buttons {
+    margin-top:20px;
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    justify-content: center; /* Align buttons to the center */
+}
+
+.education-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.education-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.nav-arrows-container {
+    display: flex;
+    justify-content: center; /* Center the arrows below the education boxes */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nav-arrow {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: #0056b3;
+}
+
+/* Add any additional styles as needed */
+
+
+
+/*__________________________*/
+
+
+
+textarea {
+    width: 100%;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    margin: 5px 0;
+    color: #555;
+    line-height: 30px;
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .textarea-readonly {
+    background-color: #f9f9f9;
+    cursor:default;
+  }
+  
+  .textarea-editable {
+    background-color: #fff;
+  }
+
+  
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.nav-arrow:hover {
+    cursor: pointer; /* Ensures the pointer shows when hovering */
+    color: #007bff; /* Change color on hover */
+}
+
+/*new Style*/
+
+/* General Styles */
+
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #007bff;
+  }
+  
+  
+  /* .textarea-readonly {
+    background-color: #f9f9f9;
+    cursor:default;
+  }
+  
+  .textarea-editable {
+    background-color: #fff;
+  } */
+  
+  /* Buttons */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .disabled-btn {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  /* Form Styling */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .err-msg {
+    color: #dc3545;
+    font-size: 0.875em;
+  }
+  
+  input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Navigation Arrows */
+  /* .nav-arrows-container {
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 20px;
+    -ms-transform-origin-y: -50px;
+  }
+  .nav-arrow:hover {
+    background-color: #0056b3;
+  } */
+  

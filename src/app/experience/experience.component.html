@@ -1,0 +1,18 @@
+<div class="experience-all">
+   <div class="experience-header">
+      <div class="experience-text">
+          <div class="experience-text-h1">
+              <h1 >Experience</h1>
+          </div>  
+      </div>
+      <div class="experience-text-content">
+          <p>
+            Each experience represents a journey of learning and exploration, where I delved into new technologies, honed my skills, and connected with diverse individuals. These experiences have shaped my unique character as a programmer, reflecting a blend of curiosity, growth, and the passion to tackle new challenges.          </p>   
+      </div>
+   </div>
+
+   <div *ngFor="let exp of experience" class="experience-content">
+      <app-exp [myexp] ="exp"></app-exp>
+      <br>
+   </div>
+</div>

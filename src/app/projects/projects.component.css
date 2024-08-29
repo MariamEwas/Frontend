@@ -1,0 +1,119 @@
+.projects-container {
+    flex-wrap:wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* height: 1vh; Full viewport height */
+    text-align: center; /* Center text horizontally */
+    font-family: 'Consolas', monospace;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+}
+
+
+
+.project-wrapper {
+    /* flex: 1 1 calc(33.333% - 40px); Ensures three cards per row with space between */
+    box-sizing: border-box;
+    /* max-width: calc(33.333% - 40px); */
+    font-family: 'Consolas', monospace;
+    position: center; /* Ensure positioning context for absolute elements */
+    margin-bottom: 20px; /* Space between project cards */
+}
+
+
+.projects-text{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.projects-text-h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden; /* Hides overflowed text */
+    width: fit-content;
+}
+/* h1 {
+    color: #1A4870;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    border-right: 4px solid #1A4870;
+    white-space: nowrap;
+    width:0%;
+    margin: 0;
+    display:inline;
+    
+}
+
+@keyframes typing {
+    from { 
+        width:0%;
+    }
+    to { 
+        width:100%;
+    }
+} */
+ h1 {
+    color: #1A4870;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .08em  darksalmon; /* The typwriter cursor */
+    border-right-style:solid;
+    white-space: nowrap; /* Keeps the content on a single line */
+
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(50, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:darksalmon }
+  }
+
+/* @keyframes blink {
+    from { 
+        border-color: transparent; 
+    }
+    to { 
+        border-color: #1A4870; 
+    }
+} */
+
+.projects-text-content {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+
+    margin: 0 auto; /* Centers the text within the available space */
+    max-width: 650px; /* Limits the width of the paragraph */
+    font-size: 23px; /* Adjust the font size */
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: #226097; /* Change the text color */
+}
+
+.projects-text-content p {
+    line-height: 40px; /* Adds space between lines for better readability */
+    margin: 10px 0; /* Adds space above and below the paragraph */
+}
+
+.projects-header{
+    border-color: black;
+    margin-top: 100px;
+    margin-bottom:100px;
+}

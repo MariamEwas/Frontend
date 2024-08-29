@@ -1,0 +1,13 @@
+<div class="messages-container">
+    <div class="header">
+        <h1>Messages from clients</h1>
+    </div>
+    <div *ngFor="let msg of messages; let i = index" class="message-card">
+        <div class="message-index">{{i + 1}}</div>
+        <div class="message-content">
+            <span class="sender-name">{{msg.SenderName}}</span><br>
+            <span class="sender-email">{{msg.SenderEmail}}</span><br>
+            <span class="message-text">{{msg.Message}}</span><br>
+        </div>
+    </div>
+</div>

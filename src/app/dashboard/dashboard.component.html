@@ -1,0 +1,120 @@
+
+
+
+<div class="dashboard">
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="projects">
+        <div class="projects-header">
+            <p>Projects</p>
+        </div>  
+         <div class="projects-container">
+            <div class="projects-wrapper" #projectsWrapper>
+                <div class="project-card" *ngFor="let myproject of projects">
+                    <div class="image-container">
+                        <img [src]="myproject.imageUrl" alt="Project Image">
+                    </div>
+                    <div class="project-info">
+                        <!-- <div class="project-id">{{myproject.id}}</div> -->
+                        <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myproject.name" [readonly]="!isEditable" #projecttext></textarea>
+                        <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myproject.desc" [readonly]="!isEditable" #projecttext></textarea>
+                        <div class="skills">
+                            <div class="skill" *ngFor="let skill of myproject.skills; let i =index">
+                                <span >
+                                    {{skill}}
+                                </span>
+                                <button (click)="removeSkill(i,myproject.id)" [ngClass]="{'Edit-button':isEditable,'notEdit-button' : !isEditable}">X</button>
+                            </div>
+                        </div>
+                        <textarea id="updateSkill" [(ngModel)]="updateSkill" name="updateSkill" 
+                            [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [readonly]="!isEditable" #projecttext></textarea>
+                            <br>
+                         <span>GitHub URL: </span>
+                         <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myproject.githubUrl" [readonly]="!isEditable" #projecttext></textarea>
+                         <div class="image-upload">
+                            <form [formGroup] ="myForm" (ngSubmit) ='onSubmit(myproject.id)'>
+                                <input type="file" (change)="onFileChange($event)" >
+                                <br>
+                                <input type="submit" value="Upload Image">
+                            </form>
+                        </div> 
+                    </div>
+                    <div>
+                        <button class="edit-button edit-desc" (click)="Edit(myproject.id)" >{{editText}}</button>
+                        <button (click)="Delete(myproject.id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="nav-arrows-container">
+            <button class="nav-arrow left-arrow" (click)="scrollLeft()">&lt;</button>
+            <button class="nav-arrow right-arrow" (click)="scrollRight()">&gt;</button>
+        </div>
+        <div>
+            <div>
+                <form (ngSubmit)="AddNewProject()" #FormProject="ngForm">
+                    <h2>New Project</h2>
+                    <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input type="text" ngModel name="id" required #id="ngModel">
+                        <div class="err-msg" *ngIf="id.invalid && id.touched">
+                            <div *ngIf="id.errors?.['required']">
+                                Don't forget to add the project ID 😊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" ngModel name="name" required #name="ngModel">
+                        <div class="err-msg" *ngIf="name.invalid && name.touched">
+                            <div *ngIf="name.errors?.['required']">
+                                Don't forget to add the project name 😊
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description:</label>
+                        <input type="text" ngModel name="desc" #desc="ngModel">  
+                    </div>       
+                    <div class="form-group">
+                        <label for="githubUrl">GitHub URL:</label>
+                        <textarea ngModel name="githubUrl" #githubUrl="ngModel"></textarea>
+                    </div>
+                    <div>
+                        <label for="skillInput">Skills:</label>
+                        <textarea id="skillInput" [(ngModel)]="newSkill" name="skillInput"></textarea>
+                        <button type="button" (click)="addSkill()">Add Skill</button>
+                    </div>
+                    <div>                    
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li *ngFor="let skill of skills">{{ skill }}</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Add" [disabled]="FormProject.invalid" [ngClass]="{'disabled-btn': FormProject.invalid}">
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div>
+
+    
+    <app-expsection></app-expsection>
+    <app-edu-section></app-edu-section>
+    <app-messagessection></app-messagessection>
+</div>
+
+
+
+
+<!-- <form [formGroup] ="myForm" (ngSubmit) ='onSubmit()'>
+
+    <input formControlName="id" type="text">
+    <br>
+    <input formControlName="name" type="text">
+    <br>
+   
+   
+</form> -->

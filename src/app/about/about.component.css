@@ -1,0 +1,95 @@
+/* Container styling */
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 80%; /* Full width of the viewport */
+  background-color: #f4f4f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  justify-content: center;
+}
+
+/* Intro text styling */
+.intro-text {
+  font-size: 22px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the intro text */
+}
+
+/* Final text styling */
+.final-text {
+  font-size: 22px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-top: 30px;
+  text-align: center; /* Center align the final text */
+}
+
+/* Semester styling */
+.semester {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between semesters */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  justify-content: center;
+}
+
+/* Semester ID styling */
+.semester p:first-of-type {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1a4870; /* Dark blue color */
+  margin-bottom: 10px; /* Space below the ID */
+}
+
+/* Semester description styling */
+.semester p:nth-of-type(2) {
+  font-size: 19px;
+  color: #666; /* Grey color */
+  margin-bottom: 15px; /* Space below the description */
+}
+
+/* Courses container styling */
+.courses-container {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  gap: 10px; /* Space between courses */
+}
+
+/* Courses label styling */
+.courses > p {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1a4870; /* Dark blue color */
+  margin-bottom: 10px; /* Space below the label */
+}
+
+/* Individual course styling */
+.one-course {
+  background-color: #f8eeee; /* Light grey background */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+  flex: 0 0 150px; /* Fixed width for each course */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Course name styling */
+.one-course p:first-of-type {
+  font-weight: bold;
+  color: #1a4870; /* Dark blue color */
+  margin-bottom: 20px; /* Space below the course name */
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* Course description styling */
+.one-course p:last-of-type {
+  font-size: 17px;
+  color: #555; /* Dark grey color */
+  margin: 0; /* No margin */
+}

@@ -1,0 +1,105 @@
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    top:50px;
+    padding: 20px;
+    font-family: 'Consolas', monospace;
+    font-weight: bold;
+    background-color: #FFF9F9; /* Soft, neutral background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #1A4870; /* Dark blue for headings */
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #8D493A; /* Warm brown for subtext */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    color: #1F316F; /* Dark blue for labels */
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #8D493A; /* Brown for border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Bright blue for focus */
+    outline: none;
+}
+
+.err-msg {
+    color: #FF6F61; /* Cute coral color */
+    font-size: 0.9rem;
+    background-color: #FFF9F9; /* Very light pink background */
+    border: 1px solid #FF6F61; /* Matching border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 0.5rem 1rem;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.err-msg div {
+    margin: 0;
+    line-height: 1.5;
+}
+
+input[type="submit"] {
+    width: 40%; /* Make the button smaller */
+    max-width: 150px; /* Set a maximum width */
+   
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1F316F; /* Dark blue for the submit button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.f-button{
+    margin-top: 30px;
+    align-items: flex-end;
+}
+
+input[type="submit"]:hover {
+    background-color: #007bff; /* Bright blue for hover state */
+}
+
+input[type="submit"].disabled-btn {
+    background-color: #C5705D; /* Brown for disabled button */
+    cursor: not-allowed;
+}

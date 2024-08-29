@@ -1,0 +1,84 @@
+<div class="education">
+    <div class="education-header">
+        <p>Education</p>
+    </div>
+    
+    <div class="education-container">
+        <div #educationWrapper class="education-wrapper">
+            <div *ngFor="let phase of educationphases" class="education-box">
+                <div class="education-content">
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.desc" [readonly]="!isEditable" #edutext></textarea><br>
+                    <div *ngFor="let course of phase.courses">
+                        <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="course.coursename" [readonly]="!isEditable" #edutext></textarea><br>
+                        <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="course.shortdesc" [readonly]="!isEditable" #edutext></textarea><br>
+                    </div>
+                    <!-- <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.role" [readonly]="!isEditable" #edutext></textarea><br>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.year" [readonly]="!isEditable" #edutext></textarea><br>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.desc" [readonly]="!isEditable" #edutext></textarea> -->
+                </div>
+                <div class="education-buttons">
+                    <button class="edit-btn" (click)="Edit(phase.id)">{{editText}}</button>
+                    <button class="delete-btn" (click)="Delete(phase.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-arrows-container">
+        <button class="nav-arrow" (click)="scrollLeft()">&#8249;</button>
+        <button class="nav-arrow" (click)="scrollRight()">&#8250;</button>
+    </div>
+    
+    <div>
+        <div>
+            <form (ngSubmit)="AddNewPhase()" #Formedu="ngForm">
+                <h2>New education Phase</h2>
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" ngModel name="id" required #id="ngModel">
+                    <div class="err-msg" *ngIf="id.invalid && id.touched">
+                        <div *ngIf="id.errors?.['required']">
+                            Don't forget to add an ID for the phase  😊
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description:</label>
+                    <input type="text" ngModel name="desc" required #desc="ngModel">
+                    <div class="err-msg" *ngIf="desc.invalid && desc.touched">
+                        <div *ngIf="desc.errors?.['required']">
+                            Don't forget to add the description 😊
+                        </div>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label for="course">Courses:</label>
+                    <div>
+                        <label for="course">name:</label>
+                        <textarea id="coursename" [(ngModel)]="coursename" name="coursename"></textarea>
+                        <div class="err-msg" *ngIf="DescAdded">
+                            Add a course name 😊
+                        </div>
+                    </div>
+                    <div>
+                        <label for="course">Short Description:</label>
+                        <textarea id="shortdesc" [(ngModel)]="shortdesc" name="shortdesc"></textarea>
+                    </div>
+                    <button type="button" (click)="addCourse()">Add Course</button>
+                    <div>                    
+                        <h3>Courses:</h3>
+                        <div  *ngFor="let course of temcourses">
+                            <p>
+                                {{ course.coursename}}
+                            </p>
+                            <p>{{course.shortdesc}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add" [disabled]="Formedu.invalid" [ngClass]="{'disabled-btn': Formedu.invalid}">
+                </div>
+            </form>  
+        </div>
+    </div>
+</div>

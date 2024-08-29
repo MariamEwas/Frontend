@@ -1,0 +1,68 @@
+<div class="experience">
+    <div class="experience-header">
+        <p>My Experiences</p>
+    </div>
+    
+    <div class="experience-container">
+        <div #experienceWrapper class="experience-wrapper">
+            <div *ngFor="let myexp of experience" class="experience-box">
+                <div class="experience-content">
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.name" [readonly]="!isEditable" #exptext></textarea><br>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.role" [readonly]="!isEditable" #exptext></textarea><br>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.year" [readonly]="!isEditable" #exptext></textarea><br>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.desc" [readonly]="!isEditable" #exptext></textarea>
+                </div>
+                <div class="experience-buttons">
+                    <button class="edit-btn" (click)="Edit(myexp.id)">{{editText}}</button>
+                    <button class="delete-btn" (click)="Delete(myexp.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-arrows-container">
+        <button class="nav-arrow" (click)="scrollLeft()">&#8249;</button>
+        <button class="nav-arrow" (click)="scrollRight()">&#8250;</button>
+    </div>
+    
+    <div>
+        <div>
+            <form (ngSubmit)="AddNewExp()" #Formexp="ngForm">
+                <h2>New Experience</h2>
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" ngModel name="id" required #id="ngModel">
+                    <div class="err-msg" *ngIf="id.invalid && id.touched">
+                        <div *ngIf="id.errors?.['required']">
+                            Don't forget to add the Experience ID 😊
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" ngModel name="name" required #name="ngModel">
+                    <div class="err-msg" *ngIf="name.invalid && name.touched">
+                        <div *ngIf="name.errors?.['required']">
+                            Don't forget to add the exp name 😊
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="text" ngModel name="year" #year="ngModel">  
+                </div> 
+                <div class="form-group">
+                    <label for="desc">Description:</label>
+                    <input type="text" ngModel name="desc" #desc="ngModel">  
+                </div>       
+                <div class="form-group">
+                    <label for="role">Role : </label>
+                    <textarea ngModel name="role" #role="ngModel"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add" [disabled]="Formexp.invalid" [ngClass]="{'disabled-btn': Formexp.invalid}">
+                </div>
+            </form>  
+        </div>
+    </div>
+</div>

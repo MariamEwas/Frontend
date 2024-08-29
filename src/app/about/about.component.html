@@ -1,0 +1,23 @@
+<div class="container">
+    <p class="intro-text">{{Introtext}}</p>
+    <div>
+      <div class="semester" *ngFor="let phase of EducationPhases">
+        <p>
+          {{phase.id}}
+        </p>
+        <p>{{phase.desc}}</p>
+        <div calss="courses">
+          <p>Courses: </p>
+          <div class="courses-container">
+          <div *ngFor="let course of phase.courses" class="one-course">
+              <p>{{course.coursename}}</p>
+              <p>{{course.shortdesc}}</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="final-text">{{finaltext}}</p>
+  </div>
+  

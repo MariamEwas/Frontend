@@ -1,0 +1,258 @@
+/* Container Styles */
+/* .form-contianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+
+
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #218838;
+} */
+
+
+.err-msg {
+    color: #FF6F61; /* Cute coral color */
+    font-size: 0.9rem;
+    background-color: #FFF9F9; /* Very light pink background */
+    border: 1px solid #FF6F61; /* Matching border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.err-msg div {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    top:50px;
+    padding: 20px;
+    font-family: 'Consolas', monospace;
+    font-weight: bold;
+    background-color: #FFF9F9; /* Soft, neutral background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #C5705D;
+
+    
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #1A4870; /* Dark blue for headings */
+    margin-bottom: 40px;
+}
+/* 
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #8D493A; 
+    margin-bottom: 30px;
+} */
+
+.form-group {
+    margin-bottom: 30px;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    color: #1F316F; /* Dark blue for labels */
+    margin-bottom: 15px;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #8D493A; /* Brown for border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    height: 100px; /* Make the message box bigger */
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Bright blue for focus */
+    outline: none;
+}
+
+
+input[type="submit"] {
+    width: 40%; /* Make the button smaller */
+    max-width: 150px; /* Set a maximum width */
+   
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1F316F; /* Dark blue for the submit button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #007bff; /* Bright blue for hover state */
+}
+
+input[type="submit"].disabled-btn {
+    background-color: #C5705D;
+    cursor: not-allowed;
+}
+
+
+
+
+.contact-text{
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .contact-text-h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden; /* Hides overflowed text */
+    width: fit-content;
+  }
+  
+  h1 {
+    color: #1A4870;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .08em  darksalmon; /* The typwriter cursor */
+    border-right-style:solid;
+    white-space: nowrap; /* Keeps the content on a single line */
+  
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(50, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:darksalmon }
+  }
+  
+  .contact-text-content {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+  
+    margin: 0 auto; /* Centers the text within the available space */
+    max-width: 650px; /* Limits the width of the paragraph */
+    font-size: 23px; /* Adjust the font size */
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: #226097; /* Change the text color */
+  }
+  
+  .contact-text-content p {
+    line-height: 40px; /* Adds space between lines for better readability */
+    margin: 10px 0; /* Adds space above and below the paragraph */
+  }
+  
+  .contact-header{
+    border-color: black;
+    margin-bottom:100px
+  }
+
+
+
+  .main-container{
+    margin-top: 100px;
+    margin-bottom:100px;
+    
+  }

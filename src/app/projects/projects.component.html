@@ -1,0 +1,19 @@
+<div>
+    <div class="projects-header">
+        <div class="projects-text">
+            <div class="projects-text-h1">
+                <h1 >Projects</h1>
+            </div>  
+        </div>
+        <div class="projects-text-content">
+            <p>
+            Explore my projects, from solo creations driven by personal inspiration to collaborative efforts built with dedicated teammates. Each project reflects hard work, creativity, and the excitement of turning ideas into reality.
+            </p>   
+        </div>
+    </div>
+    <div class="projects-container">
+        <div *ngFor="let project of projects" class="project-wrapper">
+            <app-project [myproject]="project"></app-project>
+        </div>
+    </div>
+</div>

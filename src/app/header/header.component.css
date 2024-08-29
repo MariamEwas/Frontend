@@ -1,0 +1,214 @@
+/* Container Styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures that the name and nav are spaced appropriately */
+    padding: 10px 20px;
+    font-family: 'Consolas', monospace;
+    margin-bottom: 50px;
+  }
+
+
+
+/* Navigation Links */
+.nav {
+    display: flex;
+    font-family: 'Consolas', monospace;
+    margin-right:20px;
+    gap: 15px; /* Controls the space between navigation links */
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'Consolas', monospace;
+    font-size: 18px;
+    color: #007bff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #D0B8A8;
+    color: #8D493A;
+}
+
+
+/* Optional: Active Link Styling (Uncomment if you use routerLinkActive) */
+.nav-link.active {
+  background-color: #D0B8A8;
+  color: #8d4332;
+  font-weight: bold;
+}
+
+/*An animated text */
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Consolas', monospace;
+    animation: reveal 3s ease-in-out forwards;
+    opacity: 0;
+    background: linear-gradient(90deg, #1A4870, #5B99C2);
+    -webkit-background-clip: text;
+    margin-left:50px;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.name:hover {
+    color: #1F316F;
+}
+
+
+/* .typing-effect {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    border-right: 2px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(12) forwards, blink 0.5s step-end infinite alternate;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 12ch; }
+  }
+  
+  @keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #333; }
+  }
+  
+  
+  .fade-in-out {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInOut 2s ease-in-out 3;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  .bounce {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+  .slide-in {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    animation: slideIn 1s ease-in-out forwards;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+  }
+
+
+  .zoom-in {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    animation: zoomIn 1s ease forwards;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  @keyframes zoomIn {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+
+  I will use this 
+  .flip {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    animation: flip 1s ease-in-out forwards;
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  
+  @keyframes flip {
+    to {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  } */
+  
+
+
+
+
+
+/*Background: #F8EDE3
+Section Backgrounds or Headers: #DFD3C3
+Main Text: #D0B8A8
+Buttons/Links: #C5705D
+Headers/Strong Text: #3B3B3B
+Subtle Accents: #F7D6E0, #E4CDA7*/
+
+
+
+/* Style for the container */
+
+
+/* Style for the header content (logo and name) */
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the logo image */
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between logo and name */
+}
+
+

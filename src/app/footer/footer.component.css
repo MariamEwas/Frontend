@@ -1,0 +1,118 @@
+/* Container Styles */
+.container {
+    padding: 20px;
+    font-family: 'Consolas', monospace;
+    background-color: #F8EDE3;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+        /* Aligns items vertically to the bottom */
+    height: 350px; 
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+}
+
+.contact-details {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-details p {
+    font-size: 23px;
+    color: #1A4870;
+    /* line-height: 1.6; */
+}
+
+.contact-details i {
+    margin-right: 8px;
+    color: #C5705D;
+}
+
+/* Social Media Styles */
+
+
+.social-media p {
+    font-size: 23px;
+    color: #1A4870;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #1A4870;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #C5705D;
+}
+
+/* Scroll to Top Styles */
+.scroll-to-top-container {
+    margin-top: 20px;
+}
+
+.scroll-to-top {
+    display: inline-block;
+    padding: 10px;
+    background-color: #C5705D;
+    color: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #1A4870;
+    transform: translateY(-2px);
+}
+
+.log-in-container{
+    padding: 10px;
+    background-color: #C5705D;
+    color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+
+    position:static;
+    bottom: 20px;  /* Adjust this value as needed */
+    right: 20px;  /* This will place the container on the right */
+   
+}
+
+.log-in-container button{
+    background-color: #C5705D;
+    font-family: 'Consolas', monospace;
+    font-size: 24px;
+    color: #FFF;
+    border: none;
+
+}
+.log-in-container button:hover{
+    background-color: #C5705D;
+    font-family: 'Consolas', monospace;
+    font-size: 24px;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+
+}

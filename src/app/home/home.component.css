@@ -1,0 +1,128 @@
+/* Container Styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: 'Consolas', monospace;
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+h2{
+    color:333;
+
+}
+
+/* Text Section */
+.text-section {
+    padding: 30px;
+    color: #333;
+    max-width: 60%;
+    line-height: 1.8;
+}
+
+.text-section p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4B0082; /* Darker indigo color */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.image-section {
+    max-width: 40%;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.08);
+}
+
+/* Content Box Styling */
+.content-box {
+    /* margin-bottom: 25px;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border-left: 5px solid #4B0082;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+    flex:1;
+    transition: transform 0.3s ease-in-out;
+    border-left: 5px solid #4B0082;
+    padding: 20px;
+}
+.last-div{
+    margin-bottom: 25px;
+    
+    background-color: #F0F0F0;
+     /* Indigo border */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-box:hover {
+    transform: translateX(10px);
+}
+
+/* Text Styling */
+.content-box p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+    color: #4B0082;
+    font-weight: 600;
+}
+
+/* Link Button Styling */
+.navigate-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4B0082;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Consolas', monospace;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigate-button:hover {
+    background-color: #6A5ACD; /* Slightly lighter indigo */
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section, .image-section {
+        max-width: 100%;
+    }
+
+    .image-section {
+        margin-top: 20px;
+    }
+
+    .content-box {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .content-box p {
+        font-size: 18px;
+    }
+}

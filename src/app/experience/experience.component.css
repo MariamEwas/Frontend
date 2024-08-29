@@ -1,0 +1,93 @@
+.experience-content {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px; /* Increased max-width for a more spacious look */
+  background-color: #D0B8A8; /* Light background for a softer look */
+  border-radius: 12px; /* Slightly larger border-radius for rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more prominent elevation */
+  scroll-behavior: smooth;
+  font-family:'Times New Roman', Times, serif;
+
+}
+.experience-content:hover{
+  transform: scale(1.05);
+}
+  
+  
+  app-exp {
+    margin-bottom: 20px;
+  }
+  
+  br {
+    display: none; /* To hide the <br> tags if not needed */
+  }
+  
+
+  
+  
+.experience-text{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.experience-text-h1{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden; /* Hides overflowed text */
+  width: fit-content;
+}
+
+h1 {
+  color: #1A4870;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .08em  darksalmon; /* The typwriter cursor */
+  border-right-style:solid;
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:darksalmon }
+}
+
+.experience-text-content {
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+
+  margin: 0 auto; /* Centers the text within the available space */
+  max-width: 650px; /* Limits the width of the paragraph */
+  font-size: 23px; /* Adjust the font size */
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: #226097; /* Change the text color */
+}
+
+.experience-text-content p {
+  line-height: 40px; /* Adds space between lines for better readability */
+  margin: 10px 0; /* Adds space above and below the paragraph */
+}
+
+.experience-header{
+  border-color: black;
+  margin-bottom:100px;
+  margin-top:100px;
+}

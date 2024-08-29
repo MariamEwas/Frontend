@@ -1,0 +1,59 @@
+/* Container styling for the app-exp component */
+.app-exp {
+  padding: 20px; /* Space inside each experience item */
+  margin-bottom: 20px; /* Space between each experience item */
+  background-color: #f8eeee; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #e0e0e0; /* Light border */
+  scroll-behavior: smooth;
+
+}
+
+/* Name styling */
+.app-exp-name {
+  display: block;
+  font-weight: bold; /* Bold text */
+  font-size: 26px; /* Slightly larger font size */
+  margin-bottom: 15px; /* Space below the name */
+  color: #1A4870; /* Dark text color */
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Role styling */
+.app-exp-role {
+  display: block;
+  font-style: italic; /* Italic text */
+  color: #636262; /* Lighter color */
+  margin-bottom: 15px; /* Space below the role */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+/* Year styling */
+.app-exp-year {
+  display: block;
+  font-weight: bold; /* Bold text */
+  color: #226097; /* Medium color */
+  margin-bottom: 15px; /* Space below the year */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+/* Description styling */
+.app-exp-desc {
+  display: block;
+  font-size: 20px; /* Slightly smaller font size */
+  line-height: 1.8; /* Increased line-height for readability */
+  color: #333; /* Darker color for better readability */
+  margin-top: 20px; /* Space above the description */
+  padding-top: 20px; /* Padding on top for better spacing */
+  border-top: 1px solid #e0e0e0; /* Light top border for separation */
+  font-family: 'Consolas', monospace;
+
+}
+
+/* span {
+  font-family: 'Times New Roman', Times, serif;
+} */
