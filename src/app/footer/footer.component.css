@@ -2,16 +2,18 @@
 .container {
     padding: 20px;
     font-family: 'Consolas', monospace;
-    background-color: #F8EDE3;
+    background-color: rgb(248, 209, 197);
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
         /* Aligns items vertically to the bottom */
-    height: 350px; 
+    height: 280px; 
+    font-weight: bold;
+
 }
 
 /* Contact Info Styles */
@@ -29,13 +31,15 @@
 
 .contact-details p {
     font-size: 23px;
-    color: #1A4870;
+    font-weight: bold;
+    color: #00008B;
     /* line-height: 1.6; */
 }
 
 .contact-details i {
     margin-right: 8px;
-    color: #C5705D;
+    color: 
+    #ca9494;
 }
 
 /* Social Media Styles */
@@ -43,8 +47,9 @@
 
 .social-media p {
     font-size: 23px;
-    color: #1A4870;
+    color: #00008B;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .social-icons {
@@ -54,13 +59,13 @@
 }
 
 .social-icon {
-    color: #1A4870;
+    color: #00008B;
     font-size: 30px;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #C5705D;
+    color: #ca9494;
 }
 
 /* Scroll to Top Styles */
@@ -71,8 +76,8 @@
 .scroll-to-top {
     display: inline-block;
     padding: 10px;
-    background-color: #C5705D;
-    color: #FFF;
+    background-color: #ca9494;
+    color: #FEFBF6;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 24px;
@@ -80,19 +85,17 @@
 }
 
 .scroll-to-top:hover {
-    background-color: #1A4870;
-    transform: translateY(-2px);
+    
+    transform: translateY(-4px);
 }
 
 .log-in-container{
     padding: 10px;
-    background-color: #C5705D;
-    color: #FFF;
+    background-color: #ca9494;
+    color: #00008B;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
-
-
     position:static;
     bottom: 20px;  /* Adjust this value as needed */
     right: 20px;  /* This will place the container on the right */
@@ -100,19 +103,26 @@
 }
 
 .log-in-container button{
-    background-color: #C5705D;
+    background-color:#ca9494;
     font-family: 'Consolas', monospace;
     font-size: 24px;
-    color: #FFF;
+    font-weight: bold;
+    color: #FEFBF6;
     border: none;
 
 }
-.log-in-container button:hover{
-    background-color: #C5705D;
+.log-in-container:hover{
+    /* background-color: #C5705D; */
     font-family: 'Consolas', monospace;
     font-size: 24px;
-    color: #FFF;
+    font-weight: bold;
+
+    /* color: #FFF; */
     border: none;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.log-in-container button:hover{
     cursor: pointer;
 
 }

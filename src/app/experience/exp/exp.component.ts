@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './exp.component.css'
 })
 export class ExpComponent {
-    @Input() myexp!:{id:number,name:string,year:number,desc:string,role:string};
+    @Input() myexp!:{id:number,name:string,year:string,desc:string,role:string,imageUrl:string};
     
 }

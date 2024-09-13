@@ -11,6 +11,8 @@
                     <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.role" [readonly]="!isEditable" #exptext></textarea><br>
                     <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.year" [readonly]="!isEditable" #exptext></textarea><br>
                     <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.desc" [readonly]="!isEditable" #exptext></textarea>
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="myexp.imageUrl" [readonly]="!isEditable" #exptext></textarea>
+
                 </div>
                 <div class="experience-buttons">
                     <button class="edit-btn" (click)="Edit(myexp.id)">{{editText}}</button>

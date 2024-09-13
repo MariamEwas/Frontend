@@ -1,11 +1,11 @@
-.experience-content {
+/* .experience-content {
   display: block;
   margin: 0 auto;
   padding: 20px;
-  max-width: 1000px; /* Increased max-width for a more spacious look */
-  background-color: #D0B8A8; /* Light background for a softer look */
-  border-radius: 12px; /* Slightly larger border-radius for rounded corners */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more prominent elevation */
+  max-width: 1000px; 
+  background-color: #D0B8A8; 
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
   scroll-behavior: smooth;
   font-family:'Times New Roman', Times, serif;
 
@@ -20,9 +20,9 @@
   }
   
   br {
-    display: none; /* To hide the <br> tags if not needed */
+    display: none; 
   }
-  
+   */
 
   
   
@@ -40,7 +40,7 @@
 }
 
 h1 {
-  color: #1A4870;
+  color: #00008B;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -88,6 +88,46 @@ h1 {
 
 .experience-header{
   border-color: black;
-  margin-bottom:100px;
+  margin-bottom:140px;
   margin-top:100px;
 }
+
+/*_______________*/
+/* .experience-content {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+  background-color: #D0B8A8;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.experience-content:hover {
+  transform: scale(1.05);
+} */
+
+app-exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px; /* Space between the image and the text */
+}
+
+.experience-image {
+  max-width: 150px; /* Control the image size */
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
+}
+

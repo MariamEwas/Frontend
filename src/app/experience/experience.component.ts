@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class ExperienceComponent implements OnInit,OnDestroy{
 
-  experience :{id:number,name:string,year:number,desc:string,role:string}[]=[];
+  experience :{id:number,name:string,year:string,desc:string,role:string,imageUrl:string}[]=[];
   subscription?:Subscription;
   constructor(private expserv:ExpService){}
 

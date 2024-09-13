@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class EduSectionComponent implements OnInit,AfterViewInit{
 
-  educationphases !: {id:number,desc:string,courses:{coursename:string,shortdesc:string}[]}[];
+  educationphases !: {id:number,desc:string,name:string,courses:{coursename:string,shortdesc:string}[]}[];
   temcourses :{coursename:string,shortdesc?:string}[]=[];
   coursename:string='';
   shortdesc:string='';

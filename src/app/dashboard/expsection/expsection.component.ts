@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrl: './expsection.component.css'
 })
 export class ExpsectionComponent implements OnInit,AfterViewInit{
-  experience :{id:number,name:string,year:number,desc:string,role:string}[]=[];
+  experience :{id:number,name:string,year:string,desc:string,role:string,imageUrl:string}[]=[];
 
   constructor(private expserv :ExpService){}
 

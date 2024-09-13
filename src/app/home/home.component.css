@@ -2,43 +2,77 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-around;
+    
     padding: 30px;
-    font-family: 'Consolas', monospace;
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* Gradient background */
+    font-family: 'Serif',Garamond;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin-bottom: 40px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 200px;
+    margin-top:40px;
 }
 h2{
-    color:333;
-
+    font-size:55px;
+    color: #bd8888;
+    /* color:transparent;
+    background: linear-gradient(90deg, #000080 0%, #b17f7f 25%); */
+    -webkit-background-clip: text;
+    letter-spacing: 5px;
+    /* animation: 
+    typing 2.5s steps(50, end),
+    blink-caret .5s step-end infinite; */
 }
+
+strong{
+    font-weight: bold;
+    color:#000080;
+    font-size: 40px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:darksalmon }
+  }
 
 /* Text Section */
 .text-section {
-    padding: 30px;
-    color: #333;
+    /* text-align: center; */
+    /* color: #b802be; */
     max-width: 60%;
-    line-height: 1.8;
+    font-weight: bold;
+    /* background: repeating-linear-gradient(45deg, #edd6f7, #eed1ec 10px, #FEFBF6 10px, #FEFBF6 50px); */
+    border-radius: 30%;
 }
 
 .text-section p {
-    font-size: 24px;
-    font-weight: bold;
-    color: #4B0082; /* Darker indigo color */
-    line-height: 1.6;
+    color: #b18282; /* Darker indigo color */ 
     margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
+.p1{
+    font-size: 35px;
+}
 /* Image Section */
 .image-section {
-    max-width: 40%;
+    width: 350px;
     text-align: center;
+    margin-left:50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding:0px;
+    background-color: transparent;
 }
 
 .image-section img {
-    max-width: 100%;
+    width: 350px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -59,14 +93,25 @@ h2{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
     flex:1;
     transition: transform 0.3s ease-in-out;
-    border-left: 5px solid #4B0082;
-    padding: 20px;
+    border-left: 5px solid #bd8888;
+    padding: 25px;
+    margin-bottom: 50px;
+    display: block;
+    font-size: 20px;
+    
+    font-family: 'Consolas', monospace;
 }
 .last-div{
     margin-bottom: 25px;
-    
-    background-color: #F0F0F0;
+    width:90%;
+    background-color: #FEFBF6;
      /* Indigo border */
+     
+    align-self: center; 
+  
+     display: flex;
+     flex-direction: column;
+     align-items: center;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -78,27 +123,29 @@ h2{
 /* Text Styling */
 .content-box p {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 60px;
     margin: 0;
-    color: #4B0082;
+    color: #000080;
     font-weight: 600;
 }
 
 /* Link Button Styling */
 .navigate-button {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 10px 20px;
-    background-color: #4B0082;
-    color: #FFF;
+    background-color: #bd8888;
+    color: #FEFBF6;
     text-decoration: none;
     border-radius: 8px;
     font-family: 'Consolas', monospace;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border-bottom:1px solid #c3c2c4;
+
 }
 
 .navigate-button:hover {
-    background-color: #6A5ACD; /* Slightly lighter indigo */
+    background-color: #4169E1; /* Slightly lighter indigo */
     transform: translateY(-3px);
 }
 
@@ -125,4 +172,21 @@ h2{
     .content-box p {
         font-size: 18px;
     }
+}
+
+.parent-div{
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.overview{
+    font-size:45px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color:#000080;
+    text-align: center;
+    margin-bottom:80px;
+    letter-spacing: 2px;
 }

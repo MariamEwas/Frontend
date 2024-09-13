@@ -21,6 +21,7 @@ import { ExpsectionComponent } from './dashboard/expsection/expsection.component
 import { MessagessectionComponent } from './dashboard/messagessection/messagessection.component';
 import { EduSectionComponent } from './dashboard/edusection/edu.component';
 import { LoginComponent } from './login/login.component';
+import { NewLineToBrPipe } from './pipes/new-line-to-br.pipe';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { LoginComponent } from './login/login.component';
     MessagessectionComponent,
     EduSectionComponent,
     LoginComponent,
+    NewLineToBrPipe,
   ],
   imports: [
     BrowserModule,

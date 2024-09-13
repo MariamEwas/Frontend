@@ -1,4 +1,4 @@
-<div class="app-exp">
+<!-- <div class="app-exp">
     <span class="app-exp-name">
       {{myexp.name}}
     </span>
@@ -12,4 +12,27 @@
       {{myexp.desc}}
     </span>
   </div>
+   -->
+
+
+  
+    <div class="timeline__event animated fadeInUp delay-3 timeline__event--type1">
+      <div class="timeline__event__icon">
+        <!-- Add an image or icon here for each experience -->
+        <img [src]="myexp.imageUrl" alt="Experience Icon" />
+      </div>
+      <div class="timeline__event__date">
+        <div [innerHTML]="myexp.year | newLineToBr"></div>
+      </div>
+      <div class="timeline__event__content">
+        <div class="timeline__event__title">
+          {{myexp.name}}
+        </div>
+        <div class="timeline__event__description">
+          <!-- <p>{{}}</p> -->
+          <div [innerHTML]="myexp.desc | newLineToBr"></div>
+        </div>
+      </div>
+    </div>
+  
   

@@ -1,59 +1,222 @@
+
+
+/* span {
+  font-family: 'Times New Roman', Times, serif;
+} */
+
+
+/*_____________*/
+
 /* Container styling for the app-exp component */
 .app-exp {
-  padding: 20px; /* Space inside each experience item */
-  margin-bottom: 20px; /* Space between each experience item */
-  background-color: #f8eeee; /* Light background */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border: 1px solid #e0e0e0; /* Light border */
-  scroll-behavior: smooth;
-
+  padding: 0; /* Removed padding to align with the image */
+  margin-bottom: 20px;
+  background-color: transparent; /* Transparent background to blend with parent */
+  border-radius: 8px;
+  box-shadow: none; /* Removed shadow for a flat look */
+  border: none; /* Removed border */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Name styling */
 .app-exp-name {
   display: block;
-  font-weight: bold; /* Bold text */
-  font-size: 26px; /* Slightly larger font size */
-  margin-bottom: 15px; /* Space below the name */
-  color: #1A4870; /* Dark text color */
-  font-family: 'Times New Roman', Times, serif;
-
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 10px; /* Adjusted spacing for better alignment */
+  color: #1A4870;
 }
 
 /* Role styling */
 .app-exp-role {
   display: block;
-  font-style: italic; /* Italic text */
-  color: #636262; /* Lighter color */
-  margin-bottom: 15px; /* Space below the role */
-  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #636262;
+  margin-bottom: 10px;
   font-size: 20px;
 }
 
 /* Year styling */
 .app-exp-year {
   display: block;
-  font-weight: bold; /* Bold text */
-  color: #226097; /* Medium color */
-  margin-bottom: 15px; /* Space below the year */
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #226097;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
 /* Description styling */
 .app-exp-desc {
   display: block;
-  font-size: 20px; /* Slightly smaller font size */
-  line-height: 1.8; /* Increased line-height for readability */
-  color: #333; /* Darker color for better readability */
-  margin-top: 20px; /* Space above the description */
-  padding-top: 20px; /* Padding on top for better spacing */
-  border-top: 1px solid #e0e0e0; /* Light top border for separation */
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
   font-family: 'Consolas', monospace;
+}
+
+
+/****/
+
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+body {
+  background: #f6f9fc;
+  font-family: 'Consolas', monospace;
+  color: #525f7f;
+}
+
+/* Timeline container */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
+  
+}
+
+/* Event styles */
+.timeline__event {
+  margin-bottom: 70px;
+  border:solid 1px #C0C0C0;
+  transition: transform 0.3s ease;
+
+  position: relative;
+  display: flex;
+  /* margin: 20px 0; */
+  border-radius: 6px;
+  align-self: center;
+  width: 800px;
+  background: #FEFBF6;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+              0 18px 36px -18px rgba(0, 0, 0, 0.3),
+              0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+.timeline__event:hover{
+  transform: scale(1.05);
 
 }
 
-/* span {
-  font-family: 'Times New Roman', Times, serif;
+/* Adjust for odd events */
+/* .timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
 } */
+
+.timeline__event__date {
+  color: #FEFBF6;
+  font-size: 20px;
+  font-weight: 600;
+  background: #BC8F8F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  border-radius: 6px 0 0 6px;
+}
+
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:2px;  
+  background: #fff;
+  border-radius: 100%;
+  border:solid 1px #C0C0C0;
+  width: 78px;
+  height: 78px;
+  
+	left: -15%;
+  position: absolute;
+
+}
+
+.timeline__event__icon img {
+  /* width: 24px;
+  height: 24px; */
+  width: 100%; /* Make the image fill the icon container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the icon without distortion */
+  border-radius: 50%;
+}
+
+.timeline__event__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Aligns the line vertically to the middle of the icon */
+  left: 100%; /* Positions the line at the right edge of the icon */
+  width: 50px; /* Adjust the length of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: #BC8F8F; /* Color of the line */
+  transform: translateY(-50%); /* Centers the line vertically with respect to the icon */
+  
+}
+
+.timeline__event__content {
+  padding: 25px;
+  width:fit-content;
+  border-radius: 0 6px 6px 0;
+}
+
+.timeline__event__title {
+  font-size: 27px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #000080;
+  letter-spacing: 1.5px;
+}
+
+.timeline__event__description {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #00008B;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive styles */
+@media (max-width: 786px) {
+  .timeline__event {
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+  }
+
+  .timeline__event__icon {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .timeline__event__date {
+    border-radius: 0;
+    padding: 20px;
+  }
+}
+
+@keyframes fillLeft {
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes fillTop {
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes fillLeftOdd {
+  100% {
+    left: 100%;
+  }
+}

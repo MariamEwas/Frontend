@@ -1,95 +1,203 @@
-/* Container styling */
 .container {
-  padding: 20px;
+  width: 80%;
   margin: 0 auto;
-  max-width: 80%; /* Full width of the viewport */
-  background-color: #f4f4f9; /* Light background color */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  justify-content: center;
+  font-family: 'Consolas', monospace;
+  margin-bottom:100px;
+  margin-top:100px;
 }
 
-/* Intro text styling */
-.intro-text {
-  font-size: 22px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center; /* Center align the intro text */
-}
-
-/* Final text styling */
-.final-text {
-  font-size: 22px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  margin-top: 30px;
-  text-align: center; /* Center align the final text */
-}
-
-/* Semester styling */
-.semester {
-  background-color: #ffffff; /* White background */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px;
-  margin-bottom: 20px; /* Space between semesters */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  justify-content: center;
-}
-
-/* Semester ID styling */
-.semester p:first-of-type {
-  font-weight: bold;
-  font-size: 16px;
-  color: #1a4870; /* Dark blue color */
-  margin-bottom: 10px; /* Space below the ID */
-}
-
-/* Semester description styling */
-.semester p:nth-of-type(2) {
-  font-size: 19px;
-  color: #666; /* Grey color */
-  margin-bottom: 15px; /* Space below the description */
-}
-
-/* Courses container styling */
-.courses-container {
+.semesters-container {
   display: flex;
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
-  gap: 10px; /* Space between courses */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top:60px;
 }
 
-/* Courses label styling */
-.courses > p {
-  font-weight: bold;
+.semester-card {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #c2c2df;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #FEFBF6;
+  transition: transform 0.3s ease;
+  margin-top:70px;
+}
+
+.semester-card :hover .semester-courses{
+  display:block;
+}
+.semester-card :hover .one-course{
+  animation: reveal 2s ease-in-out forwards;
+}
+@keyframes reveal {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.semester-card :hover .courses-container{
+  display: flex;
+}
+/* .semester-card:hover .semester-desc{
+  display: none;
+} */
+
+
+
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.semester-name{
+  color:#00008B;
+  font-weight: Bold;
+  font-size: 30px;
+  font-style: italic;
+}
+.semester-desc{
+  color:#00008B;
+  line-height: 30px;
   font-size: 20px;
-  color: #1a4870; /* Dark blue color */
-  margin-bottom: 10px; /* Space below the label */
 }
 
-/* Individual course styling */
-.one-course {
-  background-color: #f8eeee; /* Light grey background */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px;
-  flex: 0 0 150px; /* Fixed width for each course */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+.semester-courses{
+  display: none;
+}
+.courses-container {
+  display: none;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: 20px;
+  padding:20px;
 }
 
-/* Course name styling */
-.one-course p:first-of-type {
-  font-weight: bold;
-  color: #1a4870; /* Dark blue color */
-  margin-bottom: 20px; /* Space below the course name */
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 10px;
+.courses-text{
+  font-size: 25px;
+  color:#00008B;
+  font-style:normal;
 }
+.course-name{
+  font-size: 20px;
+  color:#00008B;
+  font-weight: Bold;
 
-/* Course description styling */
-.one-course p:last-of-type {
+}
+.course-desc{
+  border-top:1px solid #a9a9d3;
+  padding-top: 20px;
+  color:#00008B;
   font-size: 17px;
-  color: #555; /* Dark grey color */
-  margin: 0; /* No margin */
+
+}
+
+.one-course {
+  flex: 1 1 calc(33.33% - 10px); /* 3 cards per row */
+  background-color: rgb(248, 209, 197);
+  border-radius: 5px;
+  padding:10px;
+  line-height: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+
+
+
+
+
+
+.about-text{
+    
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.about-text-h1{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden; /* Hides overflowed text */
+  width: fit-content;
+}
+
+h1 {
+  color: #00008B;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .08em  darksalmon; /* The typwriter cursor */
+  border-right-style:solid;
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:darksalmon }
+}
+
+.about-text-content {
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+
+  margin: 0 auto; /* Centers the text within the available space */
+  max-width: 650px; /* Limits the width of the paragraph */
+  font-size: 23px; /* Adjust the font size */
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: #226097; /* Change the text color */
+}
+
+.about-text-content p {
+  line-height: 40px; /* Adds space between lines for better readability */
+  margin: 10px 0; /* Adds space above and below the paragraph */
+}
+
+.about-header{
+  border-color: black;
+  margin-bottom:100px;
+  margin-top: 70px;
+} 
+
+
+
+
+.final-text{
+  color:#4169E1;
+  font-size: 20px;
+  margin-top:60px;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
 }

@@ -7,6 +7,7 @@
         <div #educationWrapper class="education-wrapper">
             <div *ngFor="let phase of educationphases" class="education-box">
                 <div class="education-content">
+                    <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.name" [readonly]="!isEditable" #edutext></textarea><br>
                     <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="phase.desc" [readonly]="!isEditable" #edutext></textarea><br>
                     <div *ngFor="let course of phase.courses">
                         <textarea [ngClass]="{'textarea-readonly': !isEditable, 'textarea-editable': isEditable}" [(ngModel)]="course.coursename" [readonly]="!isEditable" #edutext></textarea><br>

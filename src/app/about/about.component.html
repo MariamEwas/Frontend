@@ -1,23 +1,39 @@
 <div class="container">
-    <p class="intro-text">{{Introtext}}</p>
-    <div>
-      <div class="semester" *ngFor="let phase of EducationPhases">
-        <p>
-          {{phase.id}}
-        </p>
-        <p>{{phase.desc}}</p>
-        <div calss="courses">
-          <p>Courses: </p>
-          <div class="courses-container">
-          <div *ngFor="let course of phase.courses" class="one-course">
-              <p>{{course.coursename}}</p>
-              <p>{{course.shortdesc}}</p>
-          </div>
+  <div class="about-header">
+    <div class="about-text">
+      <div class="about-text-h1">
+        <h1>About me</h1>
+      </div>
+    </div>
+    <div class="about-text-content">
+      <p>{{ Introtext }}</p>
+    </div>
+  </div>
+
+  <div class="semesters-container">
+    <div class="semester-card" *ngFor="let phase of EducationPhases">
+      <div class="card-content">
+        <!-- Description of the semester -->
+        <p class="semester-name">{{ phase.name }}</p>
+
+        <p class="semester-desc">{{ phase.desc }}</p>
+
+        <!-- Courses of the semester displayed in cards -->
+        <div class="semester-courses">
+            <div class="courses-text">
+              <p>Courses : </p>
+            </div>
+            <div class="courses-container">
+            <div *ngFor="let course of phase.courses" class="one-course">
+              <p class="course-name">{{ course.coursename }}</p>
+              <p class="course-desc">{{ course.shortdesc }}</p>
+            </div>
         </div>
         </div>
       </div>
     </div>
-
-    <p class="final-text">{{finaltext}}</p>
+  </div >
+  <div class="final-text">
+    <p>{{ finaltext }}</p>
   </div>
-  
+</div>
