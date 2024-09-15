@@ -11,7 +11,7 @@ export class ProjectsService {
    }
   
 <<<<<<< HEAD
-   apiURL = 'https://gem-ablaze-echo.glitch.me//project';
+   
 =======
    apiURL = 'https://gem-ablaze-echo.glitch.me/project';
 >>>>>>> 78f0d4634242cd479f393ab06b62688cb580ada7
