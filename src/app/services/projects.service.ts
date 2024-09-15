@@ -10,7 +10,7 @@ export class ProjectsService {
   constructor(private http:HttpClient) {
    }
   
-   apiURL = 'http://localhost:3000/project';
+   apiURL = 'https://gem-ablaze-echo.glitch.me//project';
 
   getProjects() :Observable <any>{
     return this.http.get<any>(this.apiURL);
