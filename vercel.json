@@ -3,10 +3,7 @@
     "builds": [
       {
         "src": "angular.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "/"
-        }
+        "use": "@vercel/node"
       }
     ],
     "routes": [
