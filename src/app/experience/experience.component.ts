@@ -9,15 +9,12 @@ import { Subscription } from 'rxjs';
 })
 export class ExperienceComponent implements OnInit,OnDestroy{
 
-  experience :{id:number,name:string,year:string,desc:string,role:string,imageUrl:string}[]=[];
+  experience :{name:string,year:string,desc:string,role:string,id:number,imageUrl:string}[]=[];
   subscription?:Subscription;
   constructor(private expserv:ExpService){}
 
   ngOnInit():void{
-    this.subscription=this.expserv.getExperience().subscribe(data =>{
-      this.experience = data;
-    });
-
+      this.experience = this.expserv.getExperience();
   }
 
   ngOnDestroy() {

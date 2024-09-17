@@ -6,7 +6,7 @@
         Project Skills: 
         <span *ngFor="let skill of myproject.skills">{{skill}}, </span>
     </p>
-    <a [href]="myproject.githubLink" target="_blank" class="github-link">
+    <a [href]="myproject.githubUrl" target="_blank" class="github-link">
         View on GitHub
     </a>
 </div> -->
@@ -14,7 +14,7 @@
 <div class="project-card">
     <div class="image-container">
         <img [src]="myproject.imageUrl" alt="Project Image">
-        <a [href]="myproject.githubLink" class="github-link" target="_blank">
+        <a [href]="myproject.githubUrl" class="github-link" target="_blank">
             Repository 
             <i class="fab fa-github"></i>
         </a>

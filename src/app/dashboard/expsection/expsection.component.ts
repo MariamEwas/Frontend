@@ -13,9 +13,7 @@ export class ExpsectionComponent implements OnInit,AfterViewInit{
   constructor(private expserv :ExpService){}
 
   ngOnInit() :void{
-    this.expserv.getExperience().subscribe(data=>{
-      this.experience = data;
-    })
+      this.experience =  this.expserv.getExperience();
   }
   ngAfterViewInit():void{
     this.adjustTextAreaHeight();

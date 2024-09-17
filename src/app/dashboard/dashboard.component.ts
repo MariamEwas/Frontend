@@ -18,9 +18,7 @@ export class DashboardComponent implements OnInit ,OnDestroy,AfterViewInit{
 
   ngOnInit(): void {
     try{
-      this.subscription=this.projectserve.getProjects().subscribe(data => {
-      this.projects = data;
-      });
+      this.projects = this.projectserve.getProjects();
       this.myForm = new FormGroup({
             filename :new FormControl(null)
       });

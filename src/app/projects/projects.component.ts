@@ -10,17 +10,16 @@ import { Subscription } from 'rxjs';
 })
 export class ProjectsComponent implements OnInit ,OnDestroy{
 
-  projects :{id: number,name: string,skills: string[], desc: string,githubLink:string,imageUrl:string}[]=[];
+  projects :{id: number,name: string,skills: string[], desc: string,githubUrl:string,imageUrl:string}[]=[];
   private subscription?: Subscription;
 
   constructor(private router: Router,private projectserve: ProjectsService) { }
 
   ngOnInit(): void {
     try{
-      this.subscription=this.projectserve.getProjects().subscribe(data => {
-      this.projects = data;
-      console.log(this.projects);
-    });
+      
+      this.projects = this.projectserve.getProjects();
+   
     }
     catch(err){
       console.log("Error in projects comp");
