@@ -20,9 +20,7 @@ export class EduSectionComponent implements OnInit,AfterViewInit{
 
   constructor(private phaseservice:EduPhaseService){}
   ngOnInit(){
-    this.phaseservice.getPhases().subscribe(data=>{
-      this.educationphases = data;
-    })
+    this.educationphases=this.phaseservice.getPhases();
   }
   ngAfterViewInit(){
     this.adjustTextAreaHeight();

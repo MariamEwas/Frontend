@@ -11,9 +11,7 @@ export class AboutComponent implements OnInit{
 
   constructor(private eduservice:EduPhaseService){}
   ngOnInit():void{
-    this.eduservice.getPhases().subscribe(data=>{
-      this.EducationPhases=data
-  })
+    this.EducationPhases=this.eduservice.getPhases();
   }
   Introtext = 'I am a third-year student at the German International University (GIU), majoring in Data Science, a field I am deeply passionate about. Throughout my first two years, I explored various areas of Computer Science, gaining a broad foundation that has guided my academic journey.';
   finaltext = '✨ I am excited to continue learning and growing in the upcoming semesters! ✨';
