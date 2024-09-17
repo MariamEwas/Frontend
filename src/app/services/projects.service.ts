@@ -10,6 +10,12 @@ export class ProjectsService {
   constructor(private http:HttpClient) {
    }
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+   
+=======
+>>>>>>> 676e95eda394bfebb9c7a4cf9148e29819bbadc5
    apiURL = 'https://gem-ablaze-echo.glitch.me/project';
 
   getProjects() :Observable <any>{
